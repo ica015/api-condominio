@@ -1,10 +1,13 @@
-module.export = {
+module.exports = {
+    development: {
         username: "cond",
-        password: 'cond1234',
-        database: "condminio",
+        password: "cond1234",
+        database: "condominio",
         host: "localhost",
+        port: "3306",
         dialect: "mysql",
         define:{
-            timestamp: true
+          timestamp: true
         }
+      },
 }
