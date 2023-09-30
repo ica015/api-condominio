@@ -1,6 +1,6 @@
 'use strict';
 
-module.export = {
+module.exports = {
   up: async (queryInterface, Sequelize) =>{
     await queryInterface.createTable('apartments', {
       id:{
@@ -14,7 +14,7 @@ module.export = {
         allowNull: false,
       },
       active:{
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.TINYINT(1),
         allowNull:false
       },
 

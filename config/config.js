@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
     development: {
         username: "cond",
         password: "cond1234",

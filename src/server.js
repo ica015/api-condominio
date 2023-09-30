@@ -11,3 +11,7 @@ app.listen(PORT, ()=>{
         console.log("Erro ao conectar no banco de dados")
     })
 })
+
+app.get('/',(req, res)=>{
+    res.send("Funcionou novamente")
+})
