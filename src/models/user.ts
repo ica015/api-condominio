@@ -22,7 +22,7 @@ export interface UserInstance extends Model<User, UserCreationAttributes>, User{
 export const User = database.define<UserInstance, User>('User',{
   id: {
     type: DataTypes.UUID,
-    autoIncrement: true,
+    defaultValue: DataTypes.UUIDV4,
     allowNull: false,
     primaryKey: true
   },
