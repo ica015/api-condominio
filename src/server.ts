@@ -1,11 +1,15 @@
-const express = require("express")
-const { sequelize } = require('./database')
+// require('dotenv/config')
+import express from "express"
+import { database } from './database'
+import {router} from "./routes"
 
 const app = express()
 const PORT = process.env.PORT || 3000
 
+app.use(router);
+
 app.listen(PORT, ()=>{
-    sequelize.authenticate().then(()=>{
+    database.authenticate().then(()=>{
         console.log("Conectado ao banco de dados com sucesso")
     }).catch(()=>{
         console.log("Erro ao conectar no banco de dados")
@@ -13,5 +17,7 @@ app.listen(PORT, ()=>{
 })
 
 app.get('/',(req, res)=>{
-    res.send("Funcionou novamente")
+    
+    console.log("teste");
+    res.send("Funcionou novamente - ")
 })
